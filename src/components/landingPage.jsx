@@ -30,12 +30,12 @@ const LandingPage = () => {
 
   return (
     <ThemeContext.Provider value={theme}>
-      <div className={`${theme === "dark" ? "text-white" : "text-black"}`}>
+      <div className={`${theme === "dark" ? "text-white" : "text-black"} `}>
         <div className="flex flex-col justify-between h-screen w-screen font-[nunito] relative">
           {theme === "dark" ? (
-            <ParticlesDark id="particles" />
+            <ParticlesDark id="particles" className='md:block hidden' />
           ) : (
-            <ParticlesLight id="particles" />
+            <ParticlesLight id="particles" className='md:block hidden' />
           )}
           <header className="flex items-center justify-between px-4 pt-4 max-w-screen-xl mx-auto w-full">
             <div className="logo w-12 h-12">
