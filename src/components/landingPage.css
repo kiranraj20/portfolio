@@ -1,0 +1,13 @@
+#particles {
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  inset: 0;
+}
+
+@media only screen and (max-width: 768px) {
+  #particles {
+    display: none;
+  }
+}
