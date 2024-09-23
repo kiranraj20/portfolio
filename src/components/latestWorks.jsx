@@ -1,7 +1,8 @@
-import React, { useRef } from "react";
+import React, { useContext, useRef } from "react";
 import data from "./data.jsx";
 import Tooltip from "../assets/icons/tooltip.jsx";
 import { useIsVisible } from "./lazyload.jsx";
+import ThemeContext from "./ThemeContext.jsx";
 
 const LatestWorks = () => {
   console.log(data);
@@ -9,10 +10,19 @@ const LatestWorks = () => {
   const refs = useRef(data.map(() => React.createRef()));
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const visibilityStatuses = refs.current.map((ref) => useIsVisible(ref));
+  const theme = useContext(ThemeContext);
 
   return (
-    <div className="bg-[#111] w-screen-xl px-4 relative mb-0">
-      <div className="text-[40px] bg-[#111] font-bold px-4 py-2 w-max mx-auto border-b-2 z-10 relative border-[#18739b]">
+    <div
+      className={`${
+        theme === "dark" ? "bg-[#111]" : "bg-[#eee]"
+      } w-screen-xl px-4 relative mb-0`}
+    >
+      <div
+        className={`text-[40px] ${
+          theme === "dark" ? "bg-[#111]" : "bg-[#eee]"
+        } font-bold px-4 py-2 w-max mx-auto border-b-2 z-10 relative border-[#18739b]`}
+      >
         Latest Works
       </div>
       {(() => {
@@ -50,7 +60,7 @@ const LatestWorks = () => {
                       alt="Not found"
                       className="relative"
                       style={{
-                        filter: `drop-shadow(0 0px 35px ${item1.color})`,
+                        filter: `drop-shadow(0 0px 35px ${theme === 'dark'? item1.color : '#111'})`,
                       }}
                     />
                   </a>
@@ -140,7 +150,7 @@ const LatestWorks = () => {
                         alt="Not found"
                         className="relative w-full"
                         style={{
-                          filter: `drop-shadow(0 0px 35px ${item1.color})`,
+                          filter: `drop-shadow(0 0px 35px ${theme === 'dark'? item2.color : '#111'})`,
                         }}
                       />
                     </a>

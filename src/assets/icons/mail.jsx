@@ -1,9 +1,9 @@
 import React from "react";
 
-const Mail = () => {
+const Mail = ({value}) => {
   return (
     <svg
-      className="w-6 hover:text-white"
+      className={`w-6 ${value} `}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 512 512"
     >

@@ -34,11 +34,11 @@ const ContactMe = () => {
       />
       <path
         d="m361.009 167.835-6.486 12.943-71.731-31.279 78.217 18.336z"
-        fill="#fff"
+        fill="currentColor"
       />
       <path
         d="m345.494 194.317-14.067 4.216-45.382-47.68 59.449 43.464z"
-        fill="#1788AE"
+        fill="currentColor"
       />
       <path
         d="m282.792 149.499 89.313 72.628-8.683-39.068-80.63-33.56z"
@@ -82,14 +82,14 @@ const ContactMe = () => {
       <path
         clip-rule="evenodd"
         d="M451.6 127.376h54.816a6.095 6.095 0 0 1 6.092 6.092v35.971a6.092 6.092 0 0 1-6.092 6.091H451.6a6.088 6.088 0 0 1-6.091-6.091v-35.971a6.094 6.094 0 0 1 6.091-6.092z"
-        stroke="#E1E4E5"
+        stroke="currentColor"
         stroke-width="4"
         stroke-linecap="round"
         stroke-linejoin="round"
       />
       <path
         d="m445.958 131.551 27.765 19.86a8.982 8.982 0 0 0 10.437.009l27.895-19.896"
-        stroke="#E1E4E5"
+        stroke="currentColor"
         stroke-width="4"
         stroke-linecap="round"
         stroke-linejoin="round"
@@ -97,14 +97,14 @@ const ContactMe = () => {
       <path
         clip-rule="evenodd"
         d="M569.123 189.982h54.816a6.094 6.094 0 0 1 6.092 6.092v35.97a6.091 6.091 0 0 1-6.092 6.092h-54.816c-3.362.005-6.091-2.725-6.091-6.092v-35.97a6.094 6.094 0 0 1 6.091-6.092z"
-        stroke="#E1E4E5"
+        stroke="currentColor"
         stroke-width="4"
         stroke-linecap="round"
         stroke-linejoin="round"
       />
       <path
         d="m563.481 194.157 27.765 19.86a8.982 8.982 0 0 0 10.437.009l27.895-19.896"
-        stroke="#E1E4E5"
+        stroke="currentColor"
         stroke-width="4"
         stroke-linecap="round"
         stroke-linejoin="round"
@@ -112,14 +112,14 @@ const ContactMe = () => {
       <path
         clip-rule="evenodd"
         d="M287.092 285h54.816a6.094 6.094 0 0 1 6.091 6.092v35.971a6.091 6.091 0 0 1-6.091 6.091h-54.816a6.088 6.088 0 0 1-6.092-6.091v-35.971a6.094 6.094 0 0 1 6.092-6.092z"
-        stroke="#E1E4E5"
+        stroke="currentColor"
         stroke-width="4"
         stroke-linecap="round"
         stroke-linejoin="round"
       />
       <path
         d="m281.449 289.175 27.765 19.859a8.98 8.98 0 0 0 10.437.009l27.895-19.895"
-        stroke="#E1E4E5"
+        stroke="currentColor"
         stroke-width="4"
         stroke-linecap="round"
         stroke-linejoin="round"
@@ -127,14 +127,14 @@ const ContactMe = () => {
       <path
         clip-rule="evenodd"
         d="M201.177 332.767h44.931a4.996 4.996 0 0 1 4.993 4.993v29.485a4.993 4.993 0 0 1-4.993 4.993h-44.931a4.991 4.991 0 0 1-4.994-4.993V337.76a4.996 4.996 0 0 1 4.994-4.993z"
-        stroke="#E1E4E5"
+        stroke="currentColor"
         stroke-width="4"
         stroke-linecap="round"
         stroke-linejoin="round"
       />
       <path
         d="m196.552 336.19 22.758 16.278a7.362 7.362 0 0 0 8.555.007l22.865-16.308"
-        stroke="#E1E4E5"
+        stroke="currentColor"
         stroke-width="4"
         stroke-linecap="round"
         stroke-linejoin="round"
@@ -142,14 +142,14 @@ const ContactMe = () => {
       <path
         clip-rule="evenodd"
         d="M281.456 400.865h35.945c2.204 0 3.994 1.743 3.994 3.89v22.973c0 2.15-1.79 3.891-3.994 3.891h-35.945c-2.205.002-3.995-1.741-3.995-3.891v-22.973c0-2.147 1.79-3.89 3.995-3.89z"
-        stroke="#E1E4E5"
+        stroke="currentColor"
         stroke-width="4"
         stroke-linecap="round"
         stroke-linejoin="round"
       />
       <path
         d="m277.461 403.079 18.455 13.151a5.987 5.987 0 0 0 6.938.006l18.541-13.174"
-        stroke="#E1E4E5"
+        stroke="currentColor"
         stroke-width="4"
         stroke-linecap="round"
         stroke-linejoin="round"
@@ -171,7 +171,7 @@ const ContactMe = () => {
         cy="178.5"
         r="7.5"
         transform="rotate(180 719.5 178.5)"
-        fill="#1788AE"
+        fill="currentColor"
       />
       <ellipse
         cx="237.212"
@@ -179,62 +179,62 @@ const ContactMe = () => {
         rx="20.159"
         ry="19.509"
         transform="rotate(180 237.212 459.914)"
-        fill="#1788AE"
+        fill="currentColor"
       />
       <circle
         r="14.681"
         transform="matrix(-1 0 0 1 236.721 163.28)"
-        fill="#1788AE"
+        fill="currentColor"
       />
       <circle
         r="13.656"
         transform="matrix(-1 0 0 1 590.967 145.426)"
-        fill="#1788AE"
+        fill="currentColor"
       />
       <circle
         r="12.282"
         transform="matrix(-1 0 0 1 479.757 499.916)"
-        fill="#E1E4E5"
+        fill="currentColor"
       />
       <circle
         r="12.919"
         transform="matrix(-1 0 0 1 138.808 366.555)"
-        fill="#E1E4E5"
+        fill="currentColor"
       />
       <circle
         r="6.365"
         transform="matrix(-1 0 0 1 708.887 268.838)"
-        fill="#E1E4E5"
+        fill="currentColor"
       />
       <circle
         r="9.715"
         transform="matrix(-1 0 0 1 639.746 109.633)"
-        fill="#E1E4E5"
+        fill="currentColor"
       />
       <circle
         r="6.355"
         transform="scale(1 -1) rotate(-75 20.72 -372.105)"
-        fill="#E1E4E5"
+        fill="currentColor"
       />
       <circle
         r="6.041"
         transform="matrix(-1 0 0 1 158.29 163.072)"
-        fill="#E1E4E5"
+        fill="currentColor"
       />
       <ellipse
         rx="6.503"
         ry="5.202"
         transform="matrix(-1 0 0 1 766.139 369.822)"
-        fill="#E1E4E5"
+        fill="currentColor"
       />
       <circle
         r="13.226"
         transform="scale(1 -1) rotate(-75 226.59 -392.714)"
-        fill="#E1E4E5"
+        fill="currentColor"
       />
       <path
         d="M660.321 148.245h.17c1.008 14.273 11.623 14.493 11.623 14.493s-11.706.229-11.706 16.721c0-16.492-11.705-16.721-11.705-16.721s10.611-.22 11.618-14.493zM285.597 45h.199c1.182 17.076 13.632 17.34 13.632 17.34s-13.729.272-13.729 20.004c0-19.731-13.73-20.005-13.73-20.005s12.446-.263 13.628-17.339zm127.986 97.753h.143c.851 12.054 9.816 12.239 9.816 12.239s-9.886.193-9.886 14.121c0-13.928-9.885-14.121-9.885-14.121s8.961-.185 9.812-12.239zm124.113-32.951h.144c.851 12.054 9.815 12.24 9.815 12.24s-9.885.193-9.885 14.121c0-13.928-9.885-14.121-9.885-14.121s8.96-.186 9.811-12.24z"
-        fill="#E1E4E5"
+        fill="currentColor"
       />
       <path
         fill-rule="evenodd"

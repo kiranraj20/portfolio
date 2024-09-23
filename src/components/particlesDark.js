@@ -1,13 +1,16 @@
 import Particles, { initParticlesEngine } from "@tsparticles/react";
-import { useEffect, useMemo, useState } from "react";
+import { useContext, useEffect, useMemo, useState } from "react";
 // import { loadAll } from "@/tsparticles/all"; // if you are going to use `loadAll`, install the "@tsparticles/all" package too.
 // import { loadFull } from "tsparticles"; // if you are going to use `loadFull`, install the "tsparticles" package too.
 import { loadSlim } from "@tsparticles/slim"; // if you are going to use `loadSlim`, install the "@tsparticles/slim" package too.
 // import { loadBasic } from "@tsparticles/basic"; // if you are going to use `loadBasic`, install the "@tsparticles/basic" package too.
+import ThemeContext from "./ThemeContext";
 
 
+const ParticlesDark = (props) => {
 
-const ParticlesComponent = (props) => {
+  const theme = useContext(ThemeContext);
+  console.log(theme)
 
   const [init, setInit] = useState(false);
   // this should be run only once per application lifetime
@@ -61,7 +64,7 @@ const ParticlesComponent = (props) => {
       },
       particles: {
         color: {
-          value: "#FFFFFF",
+          value: "#eee",
         },
         links: {
           color: "#1593b4",
@@ -105,4 +108,4 @@ const ParticlesComponent = (props) => {
   return <Particles id={props.id} init={particlesLoaded} options={options} />; 
 };
 
-export default ParticlesComponent;
+export default ParticlesDark;

@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import Left from "../assets/icons/left.jsx";
 import Right from "../assets/icons/right.jsx";
+import ThemeContext from "./ThemeContext.jsx";
 
 const Carousel = ({ images }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const theme = useContext(ThemeContext)
 
   const prevSlide = () => {
     setCurrentIndex((prevIndex) =>
@@ -18,11 +20,11 @@ const Carousel = ({ images }) => {
   };
 
   return (
-    <div className="relative w-screen flex justify-center items-center">
+    <div className="relative w-screen flex justify-center items-center py-5">
       <div
         className="w-[80%] h-[50vh] overflow-hidden relative max-w-[750px] "
         style={{
-          filter: `drop-shadow(0 0px 10px #fff)`,
+          filter: `drop-shadow(0 0px 10px ${theme==='dark'?'#eee':'#111'})`,
         }}
       >
         {images.map((image, index) => (

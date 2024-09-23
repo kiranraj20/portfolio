@@ -12,7 +12,7 @@ const data = [
     tech: ["React.js", "Node.js", "Redux", "Axios", "Bootstrap", "Dash.js", "GAPI Scripts", "Socket.io", "FFmpeg", "CORS", "Express.js", "MongoDB"],
     image: youtubeclone,
     link: "https://github.com/kiranraj20/YouTubeClone",
-    color: '#d7bf9b'
+    color: '#ab987b'
   },
   {
     title: "Health Consultant",
