@@ -34,7 +34,7 @@ const LatestWorks = ({targetRef}) => {
           elements.push(
             <div key={i} className="">
               <div
-                className={`md:flex justify-between items-center py-16 transition-opacity ease-in duration-1000 ${
+                className={`md:flex justify-between items-center md:py-16 py-5 transition-opacity ease-in duration-1000 ${
                   visibilityStatuses[i] ? "opacity-100" : "opacity-0"
                 }`}
                 ref={refs.current[i]}
@@ -102,7 +102,7 @@ const LatestWorks = ({targetRef}) => {
               </div>
               {item2 && (
                 <div
-                  className={`md:flex justify-between items-center py-16 transition-opacity ease-in duration-1000 ${
+                  className={`md:flex justify-between items-center md:py-16 py-5 transition-opacity ease-in duration-1000 ${
                     visibilityStatuses[i] ? "opacity-100" : "opacity-0"
                   }`}
                   ref={refs.current[i + 1]}

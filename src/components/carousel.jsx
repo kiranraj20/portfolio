@@ -2,10 +2,12 @@ import React, { useContext, useState } from "react";
 import Left from "../assets/icons/left.jsx";
 import Right from "../assets/icons/right.jsx";
 import ThemeContext from "./ThemeContext.jsx";
+import { motion, useScroll } from "framer-motion";
 
 const Carousel = ({ images }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const theme = useContext(ThemeContext)
+  const theme = useContext(ThemeContext);
+  const { scrollYProgress: completionProgress } = useScroll();
 
   const prevSlide = () => {
     setCurrentIndex((prevIndex) =>
@@ -20,17 +22,20 @@ const Carousel = ({ images }) => {
   };
 
   return (
-    <div className="relative w-screen flex justify-center items-center py-5">
-      <div
-        className="w-[80%] h-[50vh] overflow-hidden relative max-w-[750px] "
+    <motion.div className="relative w-screen flex justify-center items-center py-5 aspect-auto">
+      <motion.div
+        className="w-[90%] h-[50vh] overflow-hidden relative max-w-[750px] origin-bottom"
         style={{
-          filter: `drop-shadow(0 0px 10px ${theme==='dark'?'#eee':'#111'})`,
+          filter: `drop-shadow(0 0px 10px ${
+            theme === "dark" ? "#eee" : "#111"
+          })`,
+          scaleY: completionProgress,
         }}
       >
         {images.map((image, index) => (
           <div
             key={index}
-            className={` w-full h-full absolute inset-0 transition-opacity duration-1000 p-3 ${
+            className={` w-full h-full absolute inset-0 transition-opacity duration-1000 py-5 ${
               index === currentIndex ? "opacity-100" : "opacity-0"
             }`}
           >
@@ -54,7 +59,7 @@ const Carousel = ({ images }) => {
         >
           <Right />
         </button>
-      </div>
+      </motion.div>
 
       <div className="absolute bottom-5 left-1/2 transform -translate-x-1/2 flex space-x-2">
         {images.map((_, index) => (
@@ -67,7 +72,7 @@ const Carousel = ({ images }) => {
           ></button>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 };
 
