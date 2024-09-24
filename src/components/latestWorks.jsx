@@ -4,7 +4,7 @@ import Tooltip from "../assets/icons/tooltip.jsx";
 import { useIsVisible } from "./lazyload.jsx";
 import ThemeContext from "./ThemeContext.jsx";
 
-const LatestWorks = () => {
+const LatestWorks = ({targetRef}) => {
   console.log(data);
 
   const refs = useRef(data.map(() => React.createRef()));
@@ -14,6 +14,7 @@ const LatestWorks = () => {
 
   return (
     <div
+    ref={targetRef}
       className={`${
         theme === "dark" ? "bg-[#111]" : "bg-[#eee]"
       } w-screen-xl px-4 relative mb-0`}

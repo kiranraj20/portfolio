@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import "./landingPage.css";
 import LatestWorks from "./latestWorks.jsx";
 import Connect from "./connect.jsx";
@@ -20,22 +20,31 @@ import ThemeContext from "./ThemeContext.jsx";
 import ParticlesDark from "./particlesDark.js";
 import ParticlesLight from "./particlesLight.js";
 import Footer from "./footer.jsx";
+import AboutMe from "./aboutMe.jsx";
 
 const LandingPage = () => {
   const [theme, setTheme] = useState("dark");
+  const [aboutMe, setAboutMe] = useState(false);
+  const targetRef = useRef(null);
 
   const handleTheme = () => {
     setTheme((prevTheme) => (prevTheme === "dark" ? "light" : "dark"));
+  };
+  const scrollToTarget = () => {
+    if (targetRef.current) {
+      targetRef.current.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   return (
     <ThemeContext.Provider value={theme}>
       <div className={`${theme === "dark" ? "text-white" : "text-black"} `}>
+        {aboutMe && <AboutMe setAboutMe={setAboutMe} />}
         <div className="flex flex-col justify-between h-screen w-screen font-[nunito] relative">
           {theme === "dark" ? (
-            <ParticlesDark id="particles" className='md:block hidden' />
+            <ParticlesDark id="particles" className="md:block hidden" />
           ) : (
-            <ParticlesLight id="particles" className='md:block hidden' />
+            <ParticlesLight id="particles" className="md:block hidden" />
           )}
           <header className="flex items-center justify-between px-4 pt-4 max-w-screen-xl mx-auto w-full">
             <div className="logo w-12 h-12">
@@ -79,7 +88,10 @@ const LandingPage = () => {
                 <p className="font-[Merriweather] italic my-4 md:my-8 pointer-events-none">
                   MERN STACK DEVELOPER
                 </p>
-                <button className=" bg-[#4595eb] py-2 px-5 rounded font-extrabold bg-gradient-to-l from-[#1595b6] to-[#1f2667e6] relative hover:scale-110 ease-in-out duration-100 group ">
+                <button
+                  onClick={() => setAboutMe(true)}
+                  className=" bg-[#4595eb] py-2 px-5 rounded font-extrabold bg-gradient-to-l from-[#1595b6] to-[#1f2667e6] relative hover:scale-110 ease-in-out duration-100 group "
+                >
                   About Me
                   <RightArrow />
                 </button>
@@ -162,13 +174,16 @@ const LandingPage = () => {
               theme === "dark" ? "after:bg-[#444]" : "after:bg-[#bbb]"
             } after:content-[''] after:w-[2px] after:h-6 after:left-1/2 after:-translate-x-1/2 after:top-[80%] `}
           >
-            <button className=" bg-[#4595eb] py-2 px-5 rounded font-extrabold bg-gradient-to-l from-[#1595b6] to-[#1f2667e6] relative hover:scale-110 ease-in-out duration-100 group mb-20 ">
+            <button
+              onClick={scrollToTarget}
+              className=" bg-[#4595eb] py-2 px-5 rounded font-extrabold bg-gradient-to-l from-[#1595b6] to-[#1f2667e6] relative hover:scale-110 ease-in-out duration-100 group mb-20 "
+            >
               Latest Works
               <DownArrow />
             </button>
           </div>
         </div>
-        <LatestWorks />
+        <LatestWorks targetRef={targetRef} />
         <Certifications />
         <Connect />
         <Footer />
