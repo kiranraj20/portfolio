@@ -4,7 +4,7 @@ import Tooltip from "../assets/icons/tooltip.jsx";
 import { useIsVisible } from "./lazyload.jsx";
 import ThemeContext from "./ThemeContext.jsx";
 
-const LatestWorks = ({targetRef}) => {
+const LatestWorks = ({ targetRef }) => {
   console.log(data);
 
   const refs = useRef(data.map(() => React.createRef()));
@@ -14,7 +14,7 @@ const LatestWorks = ({targetRef}) => {
 
   return (
     <div
-    ref={targetRef}
+      ref={targetRef}
       className={`${
         theme === "dark" ? "bg-[#111]" : "bg-[#eee]"
       } w-screen-xl px-4 relative mb-0`}
@@ -35,7 +35,7 @@ const LatestWorks = ({targetRef}) => {
             <div key={i} className="">
               <div
                 className={`md:flex justify-between items-center md:py-16 py-5 transition-opacity ease-in duration-1000 ${
-                  visibilityStatuses[i] ? "opacity-100" : "opacity-0"
+                  visibilityStatuses[i] ? "opacity-100 " : "opacity-0"
                 }`}
                 ref={refs.current[i]}
               >
@@ -61,7 +61,9 @@ const LatestWorks = ({targetRef}) => {
                       alt="Not found"
                       className="relative"
                       style={{
-                        filter: `drop-shadow(0 0px 35px ${theme === 'dark'? item1.color : '#111'})`,
+                        filter: `drop-shadow(0 0px 35px ${
+                          theme === "dark" ? item1.color : "#111"
+                        })`,
                       }}
                     />
                   </a>
@@ -103,7 +105,7 @@ const LatestWorks = ({targetRef}) => {
               {item2 && (
                 <div
                   className={`md:flex justify-between items-center md:py-16 py-5 transition-opacity ease-in duration-1000 ${
-                    visibilityStatuses[i] ? "opacity-100" : "opacity-0"
+                    visibilityStatuses[i + 1] ? "opacity-100" : "opacity-0"
                   }`}
                   ref={refs.current[i + 1]}
                 >
@@ -151,7 +153,9 @@ const LatestWorks = ({targetRef}) => {
                         alt="Not found"
                         className="relative w-full"
                         style={{
-                          filter: `drop-shadow(0 0px 35px ${theme === 'dark'? item2.color : '#111'})`,
+                          filter: `drop-shadow(0 0px 35px ${
+                            theme === "dark" ? item2.color : "#111"
+                          })`,
                         }}
                       />
                     </a>

@@ -2,7 +2,7 @@ import React from "react";
 import Coder from "../assets/icons/coder";
 import Close from "../assets/icons/close";
 
-const AboutMe = ({ setAboutMe }) => {
+const AboutMe = ({ setAboutMe, aboutMe }) => {
   const skills = [
     "HTML",
     "CSS",
@@ -27,7 +27,7 @@ const AboutMe = ({ setAboutMe }) => {
   ];
 
   return (
-    <div className="absolute inset-0 bg-[#111] z-50 bg-opacity-90 flex justify-center items-center">
+    <div className={`absolute inset-0 bg-[#111] z-50 bg-opacity-90 justify-center items-center duration-1000 ${aboutMe?'flex duration-1000':'hidden duration-1000'} `}>
       <div
         className="flex justify-start items-center w-[90%] max-h-screen bg-[#111] rounded-xl flex-col "
         style={{ filter: "drop-shadow(0 0px 10px #eee)" }}

@@ -26,7 +26,7 @@ const Carousel = ({ images }) => {
       <motion.div
         className="w-[90%] h-[50vh] overflow-hidden relative max-w-[750px] origin-bottom"
         style={{
-          filter: `drop-shadow(0 0px 10px ${
+          filter: `drop-shadow(0 0px 5px ${
             theme === "dark" ? "#eee" : "#111"
           })`,
           scaleY: completionProgress,
