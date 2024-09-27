@@ -41,7 +41,7 @@ const AboutMe = ({ setAboutMe, aboutMe }) => {
     >
       <div
         className="flex justify-start items-center w-[90%] md:w-[70%] max-h-screen rounded-xl flex-col"
-        style={{ filter: "drop-shadow(0 0px 8px #eee)" }}
+        style={{ filter: "drop-shadow(0 0px 3px #eee)" }}
         onClick={(e) => e.stopPropagation()}
       >
         <div
