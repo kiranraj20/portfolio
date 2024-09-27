@@ -1,25 +1,36 @@
 import React, { useContext } from "react";
 import ContactMe from "../assets/icons/contactMe";
 import ThemeContext from "./ThemeContext";
+import { useForm, ValidationError } from "@formspree/react";
 
 const Connect = () => {
   const theme = useContext(ThemeContext);
 
-  const bgClass = theme === 'dark' ? 'bg-gray-800' : 'bg-gray-100';
-  const textClass = theme === 'dark' ? 'text-white' : 'text-gray-900';
-  const borderClass = theme === 'dark' ? 'border-gray-600' : 'border-gray-300';
-  const focusClass = theme === 'dark' ? 'dark:focus:ring-blue-800 dark:focus:border-blue-800' : 'focus:ring-blue-500 focus:border-blue-500';
+  const bgClass = theme === "dark" ? "bg-gray-800" : "bg-gray-100";
+  const textClass = theme === "dark" ? "text-white" : "text-gray-900";
+  const borderClass = theme === "dark" ? "border-gray-600" : "border-gray-300";
+  const focusClass =
+    theme === "dark"
+      ? "dark:focus:ring-blue-800 dark:focus:border-blue-800"
+      : "focus:ring-blue-500 focus:border-blue-500";
+
+  const [state, handleSubmit] = useForm("xpwavqyl");
+  if (state.succeeded) {
+    window.location.href = "/";
+  }
 
   return (
     <div className={`w-full py-5 ${bgClass}`}>
       <div className="flex justify-center items-center">
-        <h1 className={`text-[40px] font-bold px-4 py-2 w-max mx-auto border-b-2 z-10 relative border-[#18739b] ${textClass}`}>
+        <h1
+          className={`text-[40px] font-bold px-4 py-2 w-max mx-auto border-b-2 z-10 relative border-[#18739b] ${textClass}`}
+        >
           Lets Connect
         </h1>
       </div>
       <div className="flex md:flex-row flex-col justify-center items-center overflow-hidden">
         <ContactMe className="w-full" />
-        <form className="w-full max-w-xl px-7">
+        <form className="w-full max-w-xl px-7" onSubmit={handleSubmit}>
           <label
             htmlFor="name"
             className={`block my-2 text-sm font-medium ${textClass}`}
@@ -45,6 +56,7 @@ const Connect = () => {
               className={`bg-gray-50 border-2 outline-none ${borderClass} text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5 ${bgClass} dark:placeholder-gray-400 ${focusClass}`}
               placeholder="Enter your Name"
             />
+            <ValidationError prefix="Name" field="name" errors={state.errors} />
           </div>
           <label
             htmlFor="email"
@@ -66,11 +78,16 @@ const Connect = () => {
               </svg>
             </div>
             <input
-              type="text"
+              type="email"
               id="email"
               name="email"
               className={`bg-gray-50 border-2 outline-none ${borderClass} text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5 ${bgClass} dark:placeholder-gray-400 ${focusClass}`}
               placeholder="Enter your Email"
+            />
+            <ValidationError
+              prefix="Email"
+              field="email"
+              errors={state.errors}
             />
           </div>
           <label
@@ -81,13 +98,18 @@ const Connect = () => {
           </label>
           <div className="relative">
             <textarea
-              type="text"
+              type="textarea"
               id="message"
               name="message"
               rows={8}
               className={`bg-gray-50 border-2 outline-none ${borderClass} text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 ${bgClass} dark:placeholder-gray-400 ${focusClass} no-scrollbar`}
               placeholder="Leave a message..."
             ></textarea>
+            <ValidationError
+              prefix="Message"
+              field="message"
+              errors={state.errors}
+            />
           </div>
           <button
             type="submit"

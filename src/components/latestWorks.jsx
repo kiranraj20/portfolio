@@ -5,7 +5,6 @@ import { useIsVisible } from "./lazyload.jsx";
 import ThemeContext from "./ThemeContext.jsx";
 
 const LatestWorks = ({ targetRef }) => {
-  console.log(data);
 
   const refs = useRef(data.map(() => React.createRef()));
   // eslint-disable-next-line react-hooks/rules-of-hooks
