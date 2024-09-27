@@ -1,5 +1,7 @@
-import React, { useEffect, useRef } from "react";
+import React, { useContext, useEffect, useRef } from "react";
 import Reveal from "./reveal";
+import MernStack from "./mernStack";
+import ThemeContext from "./ThemeContext";
 
 const AboutMe = ({ setAboutMe, aboutMe }) => {
   const skills = [
@@ -51,6 +53,8 @@ const AboutMe = ({ setAboutMe, aboutMe }) => {
     );
   };
 
+  const theme = useContext(ThemeContext);
+
   useEffect(() => {
     const handlePointerMove = (e) => {
       applyOverlayMask(e);
@@ -68,7 +72,7 @@ const AboutMe = ({ setAboutMe, aboutMe }) => {
   return (
     <div
       id="overlay"
-      className={`absolute inset-0 bg-[#111] z-50 bg-opacity-90 justify-center items-center duration-1000  overflow-scroll no-scrollbar ${
+      className={`absolute inset-0 ${theme === 'dark'?'bg-[#111]':'bg-[#eee]'} z-50 bg-opacity-90 justify-center items-center duration-1000  overflow-scroll no-scrollbar ${
         aboutMe ? "flex duration-1000" : "hidden duration-1000"
       } `}
       onClick={handleClickOutside}
@@ -82,8 +86,9 @@ const AboutMe = ({ setAboutMe, aboutMe }) => {
           <div className="relative" ref={cardsContainer}>
             <div className="md:w-full flex justify-start items-center flex-col gap-y-7 py-5 max-w-full ">
               <Reveal>
-                <div className="flex flex-col justify-center items-center p-5 bg-[#111] rounded-xl">
+                <div className={`flex flex-col justify-center items-center p-5 ${theme === 'dark'?'bg-[#111]':'bg-[#eee]'} rounded-xl`}>
                   <h1 className="text-[24px] font-bold pb-5 ">ABOUT ME</h1>
+                  <MernStack />
                   <p className="text-[18px] hyphens-auto">
                     A skilled front-end developer experienced in building
                     dynamic web apps using ReactJS, Angular, and Tailwind CSS.
@@ -96,7 +101,7 @@ const AboutMe = ({ setAboutMe, aboutMe }) => {
                 </div>
               </Reveal>
               <Reveal>
-                <div className="flex flex-col justify-center items-center p-5 bg-[#111] rounded-xl">
+                <div className={`flex flex-col justify-center items-center p-5 ${theme === 'dark'?'bg-[#111]':'bg-[#eee]'} rounded-xl`}>
                   <h1 className="text-[24px] font-bold pb-5 ">SKILLS</h1>
                   <div className="flex  flex-wrap justify-start items-start gap-2">
                     {skills.map((item, index) => {
@@ -113,7 +118,7 @@ const AboutMe = ({ setAboutMe, aboutMe }) => {
                 </div>
               </Reveal>
               <Reveal>
-                <div className="flex flex-col justify-center items-center p-5 bg-[#111] rounded-xl">
+                <div className={`flex flex-col justify-center items-center p-5 ${theme === 'dark'?'bg-[#111]':'bg-[#eee]'} rounded-xl`}>
                   <h1 className="text-[24px] font-bold pb-5 ">EXPERIENCE</h1>
                   <div className="w-full flex justify-between font-extrabold">
                     <h1>Web Development Intern - Null Class EduTech</h1>
@@ -158,7 +163,7 @@ const AboutMe = ({ setAboutMe, aboutMe }) => {
                 </div>
               </Reveal>
               <Reveal>
-                <div className="flex flex-col justify-center items-center p-5 bg-[#111] rounded-xl">
+                <div className={`flex flex-col justify-center items-center p-5 ${theme === 'dark'?'bg-[#111]':'bg-[#eee]'} rounded-xl`}>
                   <h1 className="text-[24px] font-bold pb-5 ">EDUCATION</h1>
                   <div className="w-full flex justify-between font-extrabold">
                     <h1>
@@ -206,6 +211,7 @@ const AboutMe = ({ setAboutMe, aboutMe }) => {
               <Reveal>
                 <div className="flex flex-col justify-center items-center p-5 bg-[#19428f] rounded-xl">
                   <h1 className="text-[24px] font-bold pb-5 ">ABOUT ME</h1>
+                  <MernStack />
                   <p className="text-[18px] hyphens-auto">
                     A skilled front-end developer experienced in building
                     dynamic web apps using ReactJS, Angular, and Tailwind CSS.
@@ -218,7 +224,7 @@ const AboutMe = ({ setAboutMe, aboutMe }) => {
                 </div>
               </Reveal>
               <Reveal>
-                <div className="flex flex-col justify-center items-center p-5 bg-[#19428f] rounded-xl">
+                <div className="flex flex-col justify-center items-center p-5 bg-[#47a248] rounded-xl">
                   <h1 className="text-[24px] font-bold pb-5 ">SKILLS</h1>
                   <div className="flex  flex-wrap justify-start items-start gap-2">
                     {skills.map((item, index) => {
@@ -232,7 +238,7 @@ const AboutMe = ({ setAboutMe, aboutMe }) => {
                 </div>
               </Reveal>
               <Reveal>
-                <div className="flex flex-col justify-center items-center p-5 bg-[#19428f] rounded-xl">
+                <div className="flex flex-col justify-center items-center p-5 bg-[#61dafb] rounded-xl">
                   <h1 className="text-[24px] font-bold pb-5 ">EXPERIENCE</h1>
                   <div className="w-full flex justify-between font-extrabold">
                     <h1>Web Development Intern - Null Class EduTech</h1>
@@ -277,7 +283,7 @@ const AboutMe = ({ setAboutMe, aboutMe }) => {
                 </div>
               </Reveal>
               <Reveal>
-                <div className="flex flex-col justify-center items-center p-5 bg-[#19428f] rounded-xl">
+                <div className="flex flex-col justify-center items-center p-5 bg-[#8cc84b] rounded-xl">
                   <h1 className="text-[24px] font-bold pb-5 ">EDUCATION</h1>
                   <div className="w-full flex justify-between font-extrabold">
                     <h1>
