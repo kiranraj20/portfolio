@@ -3,8 +3,18 @@ import consultant from '../assets/images/consultant.png'
 import eventbooking from '../assets/images/eventbooking.png'
 import mall_analysis from '../assets/images/mall_analysis.png'
 import todo_app from '../assets/images/toto_app.png'
+import flowfit from '../assets/images/flowfit.png'
 
 const data = [
+  {
+    title: "FlowFit",
+    name: "Fullstack Website",
+    desc: "FlowFit is a dynamic platform offering a range of wellness and fitness services, including yoga, dance, and personalized plans, designed to help users achieve a healthier lifestyle.",
+    tech: ["React.js", "Node.js", "Axios", "Framer Motion", "CORS", "Express.js", "Air Table"],
+    image: flowfit,
+    link: "https://flowfit.framer.website",
+    color: '#15b8b8'
+  },
   {
     title: "YouTube Clone",
     name: "Fullstack Website",
