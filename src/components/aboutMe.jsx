@@ -9,6 +9,7 @@ const AboutMe = ({ setAboutMe, aboutMe }) => {
     "MS EXCEL",
     "MS WORD",
     "Power BI",
+    "SQL",
     "HTML",
     "CSS",
     "JavaScript",
@@ -25,8 +26,6 @@ const AboutMe = ({ setAboutMe, aboutMe }) => {
     "Docker",
     "Heroku",
     "Vercel",
-    "ESLint",
-    "Prettier",
     "RESTful APIs",
     "Problem-solving",
   ];
