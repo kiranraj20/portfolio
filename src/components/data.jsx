@@ -4,8 +4,18 @@ import eventbooking from '../assets/images/eventbooking.png'
 import mall_analysis from '../assets/images/mall_analysis.png'
 import todo_app from '../assets/images/toto_app.png'
 import flowfit from '../assets/images/flowfit.png'
+import DataAnalytics from '../assets/images/DataAnalytics.png'
 
 const data = [
+  {
+    title: "DataAnalytics",
+    name: "Impact of Car Features on Price Prediction",
+    desc: "A comprehensive data analysis project that explores the relationship between car features and prices, using statistical operations to analyze vehicle costs based on specific attributes.",
+    tech: ["Excel", "MS Word", "SQL Workbench", "SQL", "Power BI", "python"],
+    image: DataAnalytics,
+    link: "https://drive.google.com/drive/folders/1sSEsJb_Cnw952NwFpEkZlFhrBlQclrdz?usp=sharing",
+    color: '#c2e7ff'
+  },
   {
     title: "FlowFit",
     name: "Fullstack Website",

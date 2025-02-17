@@ -5,6 +5,10 @@ import ThemeContext from "./ThemeContext";
 
 const AboutMe = ({ setAboutMe, aboutMe }) => {
   const skills = [
+    "Python",
+    "MS EXCEL",
+    "MS WORD",
+    "Power BI",
     "HTML",
     "CSS",
     "JavaScript",
@@ -120,6 +124,24 @@ const AboutMe = ({ setAboutMe, aboutMe }) => {
               <Reveal>
                 <div className={`flex flex-col justify-center items-center p-5 ${theme === 'dark'?'bg-[#111]':'bg-[#eee]'} rounded-xl`}>
                   <h1 className="text-[24px] font-bold pb-5 ">EXPERIENCE</h1>
+                  <div className="w-full flex justify-between font-extrabold">
+                    <h1>Data Analytics Internship - Trainity</h1>
+                    <h1>Oct 2024 - Jan 2025</h1>
+                  </div>
+                  <ul className="list-disc p-5 w-full">
+                    <li>
+                      Experienced in data analytics with expertise in SQL, Excel, and data visualization
+                    </li>
+                    <li>
+                      Conducted in-depth analyses across diverse domains, including user engagement, operational metrics, hiring processes, and financial risk assessment.
+                    </li>
+                    <li>
+                      Delivered actionable insights to optimize business strategies, improve efficiency, and enhance decision-making.
+                    </li>
+                    <li>
+                      Proficient in handling large datasets, identifying trends, and creating comprehensive reports to drive data-driven solutions.
+                    </li>
+                  </ul>
                   <div className="w-full flex justify-between font-extrabold">
                     <h1>Web Development Intern - Null Class EduTech</h1>
                     <h1>Apr 2024 - Jun 2024</h1>

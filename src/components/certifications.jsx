@@ -7,36 +7,42 @@ import problemSolving from "../assets/images/certifications/problemSolving.jpg";
 import verzeoCS from "../assets/images/certifications/verzeoCS.jpg";
 import verzeoML from "../assets/images/certifications/verzeoML.jpg";
 import ThemeContext from "./ThemeContext";
+import TrainityInternship from "../assets/images/certifications/TrainityInternship.jpg";
 
 const Certifications = () => {
   const certifications = [
     {
       id: 1,
       name: "Certified Web Developer",
+      image: TrainityInternship,
+    },
+    {
+      id: 2,
+      name: "Certified Web Developer",
       image: NullClassI,
     },
     {
-      id: 1,
+      id: 3,
       name: "Certified Web Developer",
       image: INFILA,
     },
     {
-      id: 1,
+      id: 4,
       name: "Certified Web Developer",
       image: NullClassT,
     },
     {
-      id: 1,
+      id: 5,
       name: "Certified Web Developer",
       image: problemSolving,
     },
     {
-      id: 1,
+      id: 6,
       name: "Certified Web Developer",
       image: verzeoCS,
     },
     {
-      id: 1,
+      id: 7,
       name: "Certified Web Developer",
       image: verzeoML,
     },
