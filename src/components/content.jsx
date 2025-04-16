@@ -50,7 +50,7 @@ const Content = ({ gridSquareVariants, theme, setAboutMe }) => {
         <li>
           <motion.a
             variants={gridSquareVariants}
-            href="https://www.linkedin.com/in/kiran-raj-18708720a"
+            href="https://www.linkedin.com/in/kiran-raj-suram-18708720a/"
             target="_blank"
             rel="noreferrer"
           >
